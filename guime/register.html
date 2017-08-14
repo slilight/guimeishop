@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>注册</title>
+<link rel="stylesheet" type="text/css" href="css/headed.css"/> 
+<link rel="stylesheet" type="text/css" href="css/toop.css">
+   <script type="text/javascript" >
+
+       function froe(){
+           var name,pwd,name_text,name_list,email,again;
+           name=document.getElementById("loginname").value;
+           pwd=document.getElementById("lot-password").value;
+           name_text=document.getElementById("word").value;
+           name_list=document.getElementById("one-name").value;
+           email=document.getElementById("email").value;
+           again=document.getElementById("again").value;
+           var eap=/\w/;
+           if(eap.test(name))
+           {
+//				  alert("非法字符");
+               document.getElementById("text-name").innerHTML="";
+           }
+           else
+           {
+               document.getElementById("text-name").innerHTML="用户名非法";
+           }
+           var kpe=/^\d{6,}$/;
+           if(kpe.test(pwd)){
+               document.getElementById("pwd-text").innerHTML="";
+           }
+           else{
+               document.getElementById("pwd-text").innerHTML="密码错误";
+           }
+           if(pwd=again){
+               document.getElementById("pwd-text").innerHTML="";
+           }
+           else
+           {
+               document.getElementById("pwd-text").innerHTML="两次密码不一样";
+           }
+           var na=/[\u4e00-\u9fa5]{2,4}|[a-z]+/i;
+           if(na.test( name_text)){
+               document.getElementById("name").innerHTML="";
+           }
+           else
+           {
+               document.getElementById("name").innerHTML="姓名输入错误";
+           }
+           var xin=/[\u4e00-\u9fa5]{1,2}|[a-z]+/i;
+           if(xin.test(name_list)){
+               document.getElementById("one-name").innerHTML="";
+           }
+           else
+           {
+               document.getElementById("one-name").innerHTML="姓氏输入错误";
+           }
+           var email=/(w{3}\.|)[0-9a-z_-]+@[0-9a-z]+\.com\d/;
+           if(xin.test(name_list)){
+               document.getElementById("one-name").innerHTML="";
+           }
+           else
+           {
+               document.getElementById("one-name").innerHTML="邮箱地址输入错误";
+           }
+       }
+   </script>
+<style type="text/css">
+   *{
+	   margin:0;
+	   padding:0;}
+    #header{
+		width:1024px;
+		height:150px;
+		margin:auto;
+		}
+    #center{
+		height:600px;
+		width:977px;
+		margin:auto;}
+    #main{
+		width:977px;
+		height:187px;
+		background:url("images/reg_bg.gif") no-repeat;
+		margin:auto;}
+	#sidebar_a table tr td input{
+			padding-left:20px;}
+	#sidebar_a{
+		padding-top:80px;
+		float:left;
+		padding-left:20px;}
+	#sidebar_b{
+		float:left;
+		padding-top:90px;
+		padding-left:40px;}
+	#sidebar_a table{
+		height:500px;}
+	.td{
+		text-align:right;}
+    #foot{
+	  width:1024px;
+	  height:300px;
+	  margin:auto;
+	  }
+	
+</style>
+</head>
+<body>
+<form name="register" action="srcces-good.html" method="post">
+     <div id="header">
+    	<iframe src="head.html" width="1024" height="150" frameborder="0" scrolling="no">
+        </iframe>
+    </div>
+     <div id="center">
+     <div id="main">
+          <div id="sidebar_a">
+              <table>
+                   <tr>
+                       <td class="td"> 名字：</td>
+                       <td>
+                         <input type="text" id="word"><span id="name"></span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">姓氏：
+                         <span id="one-name"></span>
+                       </td>
+                       <td>
+                            <input type="text" id="xin">
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">登录名：</td>
+                       <td>
+                            <input type="text" id="loginname">（可包含a-z、0-9和下划线）
+                           <span id="text-name"></span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">密码：</td>
+                       <td>
+                           <input type="password" minlength="6" id="lot-password">（必须包含6个字符）
+                           <span id="pwd-text"></span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">再次确认密码：</td>
+                       <td>
+                          <input type="password" id="again">
+                           <span id="pawagain"></span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">电子邮箱：</td>
+                       <td>
+                          <input type="text" id="email">（必须包含@字符）
+                           <span id="email-text"></span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">性别：</td>
+                       <td>
+                           <input type="radio"><img src="images/Male.gif"  class="input">男
+                                <input type="radio"><img src="images/Female.gif">女
+                       </td>
+                   </tr>
+                   <tr> 
+                       <td class="td">头像：</td>
+                       <td>
+                          
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">爱好：</td>
+                       <td>
+                           <input type="checkbox">运动
+                           <input type="checkbox">聊天
+                           <input type="checkbox">玩游戏
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="td">出生日期：</td>
+                       <td>
+                           <select>
+                                  <option>yyyy</option>
+                                  <option>yyyy</option>
+                                  <option>yyyy</option>
+                                  <option>yyyy</option>
+                           </select>
+                           <select>
+                                  <option>[选择月份]</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                           </select>
+                           <select>
+                                  <option>dd</option>
+                                  <option>01</option>
+                                  <option>02</option>
+                                  <option>03</option>
+                           </select>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td colspan="2" align="center">
+                        <a href="srcces-good.html" target="_blank"> <input type="image" src="images/submit.gif" onclick="froe()"/></a>
+                           <a href="register.html"><input type="image" src="images/reset.gif"></a>
+                        </td>   
+                   </tr>
+              
+              </table>
+          </div>
+          <div id="sidebar_b">
+                 <img src="images/read.gif">阅读贵美网服务协议<br/>
+                 <textarea rows="15" cols="30"></textarea>
+          </div>
+     </div>
+     </div>
+     <div id="foot">
+       <iframe src="toop.html" width="1024" height="300" frameborder="0" scrolling="no">
+       </iframe>
+         </div>
+       </form>
+
+</body>
+</html>

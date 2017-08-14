@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>dibu</title>
+<link rel="stylesheet" type="text/css" href="css/top.css"/>
+ <script type="text/javascript"  >
+        window.onload=function() {
+            var dom = document.getElementById("clock-time");
+            var dom2 = document.getElementById("rush-time");
+            var year,month,day,hours,minutes,seconds,dis;
+            function Data() {
+                 var time = new Date();
+                 year = time.getFullYear();
+                 month = time.getMonth()+1;
+                 day = time.getDay();
+                 hours = time.getHours();
+                 minutes = time.getMinutes();
+                 seconds = time.getSeconds();
+            }
+            setInterval(function () {
+                Data();
+                dom.innerHTML = year+ "年" + month + "月" + day + "日" + hours + "点" + minutes + "分" + seconds ;
+            },1000)
+
+     function  Rush(){
+         var time=new Date();
+         var today=new Date(2010,10,1,9);
+          dis=parseInt((today-time)/(1000*3600*24));
+         dom2.innerHTML="离抢购还有"+dis+"天";
+     }
+            Rush();
+       setInterval(function (){
+          Rush();
+           console.log(dis);
+
+      },24*3600*1000)
+   }
+ </script>
+</head>
+
+<body>
+    <div id="head">
+       <div id="submenu">
+       <ul >
+           <li class="tp" id="scp"></li>
+           <li>
+              <a href="javascript:window.parent.location.href='shop.html'">购物车</a>
+           </li>
+           <li class="tp" id="scp-pic"></li>
+           <li>
+               <a href="javascript:window.parent.location.href='help.html'">帮助中心</a>
+           </li>
+           <li class="tp" id="scp-tp"></li>
+           <li>
+              <a href="javascript:window.parent.location.href='shop.html'">加入收藏</a>
+           </li>
+           <li class="tp" id="scp-tap"> </li>
+           <li>
+            <a href="javascript:window.parent.location.href='index.html'">设为首页</a>
+           </li>
+           <li class="button">
+             <a href="javascript:window.parent.location.href='login.html'"><input type="submit" value="登录"></a>
+           </li>
+           <li class="button">
+                <a href="javascript:window.parent.location.href='register.html'"><input type="submit"  value="注册"></a>
+           </li>
+       </ul>
+       </div>
+       <div id="time">你好，欢迎访问贵美商城！<span id="clock-time"></span></div>
+       <div id="nav">
+       <ul>
+           <li><a href="javascript:window.parent.location.href='index.html'">首页</a></li>
+           <li> <a href="javascript:window.parent.location.href='subpage.html'">家用电器</a></li>
+           <li><a href="javascript:window.parent.location.href='subpage.html'">手机数码</a></li>
+           <li><a href="javascript:window.parent.location.href='subpage.html'">日用百货</a></li>
+           <li><a href="javascript:window.parent.location.href='subpage.html'">书籍</a></li>
+           <li><a href="javascript:window.parent.location.href='help.html'">帮助中心</a></li>
+           <li><a href="javascript:window.parent.location.href='subpage.html'">免费开店</a></li>
+           <li><a href="javascript:window.parent.location.href='subpage.html'">全球咨询</a></li>
+       </ul>
+       </div>
+    </div>
+
+    <span id="rush-time"></span>
+</body>
+</html>

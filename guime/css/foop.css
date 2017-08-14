@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+#toop ul{
+	list-style-type:none;}
+#toop ul li{
+	display:inline;
+	text-align:center;
+	}
+#toop{
+	width:1024px;
+	text-align:center;
+	margin:auto;
+	height:210px;
+	}
+#toop p{
+	    line-height:7px;
+		text-align:center;}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;}
+	
+#header{
+		width:1024px;
+		height:150px;
+		margin:auto;
+		}
+#main{
+	width:1000px;
+	height:500px;
+	margin:auto;}
+#top table{
+	width:1000px;
+	height:30px;
+	text-align:left;}
+#center table{
+    width:1000px;
+	height:300px;
+	margin:auto;
+	}
+.log{
+	background-image:url(../images/buytitle_bg.gif);
+	background-repeat:no-repeat;
+	}
+#center table tr td p{
+	margin-left:45px;}
+#log1{
+	font-weight:bold;}
+.world{
+	color:#999;}
+.world1{
+	color:#F00;}
+#bt{
+	font-weight:bold;}
+#fot table{
+    width:1000px;
+	height:150px;
+	margin:auto;
+	}
+#fot table tr td p{
+	margin-left:50px;}
+#button{
+	margin-left:100px;}
+	
+  #foot{
+	  width:1024px;
+	  height:150px;
+	  margin:auto;
+	  }
