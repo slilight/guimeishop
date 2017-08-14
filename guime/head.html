@@ -4,39 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>dibu</title>
 <link rel="stylesheet" type="text/css" href="css/top.css"/>
- <script type="text/javascript"  >
-        window.onload=function() {
-            var dom = document.getElementById("clock-time");
-            var dom2 = document.getElementById("rush-time");
-            var year,month,day,hours,minutes,seconds,dis;
-            function Data() {
-                 var time = new Date();
-                 year = time.getFullYear();
-                 month = time.getMonth()+1;
-                 day = time.getDay();
-                 hours = time.getHours();
-                 minutes = time.getMinutes();
-                 seconds = time.getSeconds();
-            }
-            setInterval(function () {
-                Data();
-                dom.innerHTML = year+ "年" + month + "月" + day + "日" + hours + "点" + minutes + "分" + seconds ;
-            },1000)
 
-     function  Rush(){
-         var time=new Date();
-         var today=new Date(2010,10,1,9);
-          dis=parseInt((today-time)/(1000*3600*24));
-         dom2.innerHTML="离抢购还有"+dis+"天";
-     }
-            Rush();
-       setInterval(function (){
-          Rush();
-           console.log(dis);
-
-      },24*3600*1000)
-   }
- </script>
 </head>
 
 <body>
